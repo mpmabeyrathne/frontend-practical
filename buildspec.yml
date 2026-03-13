@@ -6,14 +6,13 @@ phases:
       nodejs: 20
     commands:
       - echo Installing dependencies...
-      - cd frontend
       - npm install
   build:
     commands:
       - echo Building the React project...
-      - # VITE_API_URL will be provided by CodeBuild Environment Variables
+      - # VITE_API_URL should be set in CodeBuild project environment variables
       - npm run build
 artifacts:
   files:
     - '**/*'
-  base-directory: 'frontend/dist'
+  base-directory: 'dist'
