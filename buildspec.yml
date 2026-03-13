@@ -9,8 +9,7 @@ phases:
       - npm install
   build:
     commands:
-      - echo Building the React project...
-      - # VITE_API_URL should be set in CodeBuild project environment variables
+      - echo Building the project...
       - npm run build
 artifacts:
   files:
